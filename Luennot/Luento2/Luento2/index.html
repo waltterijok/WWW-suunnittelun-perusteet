@@ -56,9 +56,51 @@
     </tr>
   </table>
 
-  <form action="index.html">
-    <label for="enimi">anna etunimesi:</label>
-    <input type="text" name="etunimi" id="enimi">
+  <form action="index.html" method="get">
+    <label for="enimi">anna etunimesi:</label><br>
+    <input type="text" name="etunimi" id="enimi" placeholder="etunimi" required><br>
+    <br>
+    <label for="snimi">anna sukunimesi:</label><br>
+    <input type="text" name="sukunimi" id="snimi" placeholder="sukunimi" required><br>
+    <br>
+    <label for="sposti">anna sähköpostisi:</label><br>
+    <input type="email" name="sähköposti" id="sposti" placeholder="sähköposti" required><br>
+    <br>
+    <label for="salasana">anna salasana:</label><br>
+    <input type="password" name="salasana" id="salasana" placeholder="salasana" required><br>
+    <br>
+    <label for="synaika">anna syntymäaika:</label><br>
+    <input type="date" name="syntymaaika" id="synaika" placeholder="syntymäaika" required><br>
+    <br>
+        <p>ruokailut:</p>
+    <input type="checkbox" name="aamu" id="aamu">
+    <label for="aamu">aamupala</label>
+    <br>
+    <input type="checkbox" name="paiv" id="paiv">
+    <label for="paiv">päivällinen</label>
+    <br>
+    <input type="checkbox" name="illa" id="illa">
+    <label for="illa">illallinen</label>
+    <br>
+    <br>
+      <p>sukupuoli:</p>
+    <input type="radio" name="sukupuoli" id="nainen" checked>
+    <label for="nainen">nainen</label>
+    <br>
+    <input type="radio" name="sukupuoli" id="mies">
+    <label for="mies">mies</label>
+    <br>
+    <input type="radio" name="sukupuoli" id="muu">
+    <label for="muu">muu</label>
+    <br>
+    <label for="area">erityistoiveet:</label>
+    <br>
+    <textarea name="erityistoiveet" id="" cols="30" rows="10"></textarea>
+    <br>
+    <input type="submit" value="lähetä">
+    <input type="reset" value="tyhjennä">
+
+
 
   </form>
 
