@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Harjoitus 1</title>
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Tämä alla oleva osuus korvataan oman harjoituksen sisällöllä -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harjoitus 1</title>
+</head>
+<body>
+    <form action="h2index.html">
+    <table>
+        <tr>
+            <td><label for="enimi">Etunimi</label></td>
+            <td>
+                <input type="text" name="etunimi" id="enimi" placeholder="Etunimi">
+            </td>
+        </tr>
+        <tr>
+            <td><label for="snimi">Sukunimi</label></td>
+            <td><input type="text" name="sukunimi" id="snimi" placeholder="Sukunimi"></td>
+        </tr>
+        <tr>
+            <td><label for="sposti">Sähköposti</label></td>
+            <td><input type="email" name="sahkoposti" id="sposti" placeholder="Sähköposti"></td>
+        </tr>
+        <tr>
+            <td><label for="pwd">Salasana</label></td>
+            <td><input type="password" name="pwd" id="pwd"></td>
+        </tr>
+        <tr>
+            <td><label for="saika">Syntymäaika</label></td>
+            <td><input type="date" name="saika" id="saika"></td>
+        </tr>
+        <tr>
+            <td>Ruokailut:</td>
+            <td colspan="3">
+                <input type="checkbox" name="aamu" id="aamu">
+                <label for="aamu">Aamupala</label><br>
+                <input type="checkbox" name="paiva" id="paiva">
+                <label for="paiva">Päivällinen</label><br>
+                <input type="checkbox" name="ilta" id="ilta">
+                <label for="ilta">Iltapala</label><br>
+            </td>
+        </tr>
+        <tr>
+            <td>Sukupuoli:</td>
+            <td colspan="3">
+                <input type="radio" name="Sukupuoli" id="Nainen">
+                <label for="Nainen">Nainen</label><br>
+                <input type="radio" name="Sukupuoli" id="Mies">
+                <label for="Mies">Mies</label><br>
+                <input type="radio" name="Sukupuoli" id="Muu">
+                <label for="Muu">Muu</label>
+            </td>
+        </tr>
+        <tr>
+            <td>Erityistoiveet:</td>
+            <td>
+                <textarea name="toiveet" id="area" rows="10"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>Valintasi:</td>
+            <td>
+                <select name="Valinta" id="Valinta" multiple>Valitse näistä:
+                    <option value="Valinta1">Valinta1</option>
+                    <option value="Valinta2">Valinta2</option>
+                    <option value="Valinta3">Valinta3</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Lähetä"></td>
+            <td></td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>
