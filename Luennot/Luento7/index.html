@@ -1,0 +1,107 @@
+<em><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RWD</title>
+  <style>
+    *{
+      box-sizing: border-box;
+    }
+
+    body {
+      padding: 0;
+      margin: 0;
+    }
+
+    div, header, main, footer {
+      border: 1px solid black;
+      padding: 10px;
+    }
+
+    .container {
+      padding: 0;
+      width: 960px;
+      margin: 0 auto;
+    }
+
+    header {
+      background-color: aquamarine;
+    }
+
+    .side1, .side2 {
+      width: 25%;
+      float: left;
+      background-color: blueviolet;
+      color: white;
+    }
+
+    main {
+      width: 50%;
+      float: left;
+      background-color: white;
+    }
+
+    .clearfloat {
+      clear: both;
+    }
+
+    footer {
+      background-color: beige;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    @media screen and (max-width: 950px) {
+      .container {
+        width: 100%
+      }
+    }
+    
+    @media screen and (max-width: 767px) {
+      .side1, .side2, main {
+        width: 100%;
+      }
+      
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <header>
+      <h1>Header</h1>
+    </header>
+
+    <div class="side1">
+      <h3>Sidebar1</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur ut suscipit adipisci eligendi officiis eos quibusdam ullam provident quae voluptatibus velit laboriosam, blanditiis numquam ex totam dolorum architecto impedit vero.</p>
+    </div>
+
+    <main>
+      <h2>Maincontent</h2>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores iusto eligendi molestias laudantium, incidunt eaque libero tempora nobis adipisci rem quam tenetur exercitationem esse.
+      </p>
+      <p>
+        <img src="images/cat.jpg" alt="">
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dolores ea tempore autem? Distinctio provident eligendi dolorem esse autem, voluptas nam reiciendis voluptatibus.
+      </p>
+    </main>
+
+    <div class="side2">
+      <h3>Sidebar2</h3>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores quasi tenetur voluptatibus voluptas totam tempora iure assumenda dolores, quaerat veritatis beatae vel quidem ad quas!</p>
+    </div>
+    <br class="clearfloat">
+    <footer>
+      <p>footer</p>
+    </footer>
+
+  </div>
+</body>
+</html></em>
