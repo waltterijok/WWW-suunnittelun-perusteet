@@ -75,7 +75,9 @@ h4 {
 	color: #1b1a52;
 }
 
-.living #living a, .business #business a, .chamber #chamber a {
+.living #living a, 
+.business #business a, 
+.chamber #chamber a {
 	color: #1a1b52;
 	font-weight: bold;
 }
@@ -131,11 +133,16 @@ a img {
 
 }
 
-#sidebar1 li a:hover, #sidebar1 li a:active, #sidebar1 li a:focus {
+#sidebar1 li a:hover,
+#sidebar1 li a:active,
+#sidebar1 li a:focus {
 	color: #ff9f00;
 }
 
-.visiting #visiting a, .moving #moving a, .maplocator #maplocator a, .directory #directory a { 
+.visiting #visiting a,
+.moving #moving a,
+.maplocator #maplocator a,
+.directory #directory a { 
 	background: url(../images/arrow.gif) no-repeat left center;
 	color: #ff9f00;
 }
@@ -211,7 +218,9 @@ a img {
 	text-decoration: none;
 }
 
-#footer li a:hover, #footer li a:active, #footer li a:focus {
+#footer li a:hover, 
+#footer li a:active, 
+#footer li a:focus {
 	color: #ff9f00;
 	display: inline-block;
 	padding: 10px;
