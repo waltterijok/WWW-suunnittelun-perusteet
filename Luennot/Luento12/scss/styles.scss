@@ -1,0 +1,147 @@
+@import "partials/variables";
+@import "partials/mixins";
+* {
+    @include bs(content-box)
+}
+
+.demo {
+    color: $color7;
+}
+
+
+/* Tämä esimerkki määrittelee linkin (a) värin €color2, hover ja focus värin $color4,
+visited ja active väri on $color5 */
+a {
+    color: $color2;
+
+    &:hover,
+    &:focus {
+        color: $color4;
+    }
+
+    &:visited,
+    &:active {
+        color: $color5;
+    }    
+}
+
+
+.main {
+    .content {
+        width: 70%;     /* tämä määrittelee kohteeksi .content class, joka sijoittuu .main class sisälle */
+    }
+    .content & {
+        width: 100%;    /* kun & merkki on siselletyn classin perässä, kääntyy ympäri -> .main class joka on .contentin sisällä (WHY THE FUCK????) */
+    }
+    .content & {
+        .level_3 & {    /* kun & merkki on viimeisen classin perässä, koko rimpsu kääntyy -> level_3 class, jonka sisällä on .content class, jonka sisällä on .main class (???????) */
+            width: 30%;
+        }
+    }
+}
+
+.main {
+     &.content {
+        color: $color5;     /* kun & merkki on ensimmäisen classin jälkeen toisen classin rivillä, se nitoo ne yhteen -> .main.content */
+    }
+}
+
+
+/* tässä määritellään yleinen muotoilu box classeille (% tarkoittaa placeholderia) jonka kaikki muut boxit käyttävät */
+%box {
+    padding: 2em;
+    color: $color10;
+    background-color: $color11;
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 100px;
+}
+
+.warning-box {
+    @extend %box;   /* <-- extend %box hakee määrittelyt placeholderilta ja ottaa ne itselleen */
+    border: 4px dotted $color1;
+}
+
+.success-box {
+    @extend %box;   /* <-- extend %box hakee määrittelyt placeholderilta ja ottaa ne itselleen */
+    border: 4px dotted $color4;
+}
+
+.info-box {
+    @extend %box;   /* <-- extend %box hakee määrittelyt placeholderilta ja ottaa ne itselleen */
+    border: 4px dotted $color7;
+}
+
+.container {
+    display: flex;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    margin: 5px;
+}
+
+$primary-color: $color4;
+
+.div1 {
+    @extend %box;
+    background-color: $color4;
+}
+
+.div2 {
+    @extend %box;
+    background-color: lighten($color4, 25%)     /* lighten vaalentaa valittua väriä X prosentilla */
+}
+
+.div3 {
+    @extend %box;
+    background-color: darken($color4, 25%)  /* darken tummentaa valittua väriä X prosentilla */
+}
+
+.div4 {
+    @extend %box;
+    background-color: $color6;
+}
+
+.div5 {
+    @extend %box;
+    background-color: complement($color6)   /* complement valitsee vastavärin */
+}
+
+.div6 {
+    @extend %box;
+    background-color: $color9;
+}
+
+.div7 {
+    @extend %box;
+    background-color: adjust-hue($color9, 120deg);
+}
+
+.div8 {
+    @extend %box;
+    background-color: adjust-hue($color9, 240deg);
+}
+
+.div8 {
+    @extend %box;
+    background-color: transparentize($color8, 0.8);
+}
+
+.div9 {
+    @extend %box;
+    background-color: mix($color8, $color4, 20%);
+}
+
+@for $i from 1 through 10 {
+    .item_#{$i} {
+        background-image: image-url("svg/img_#{$i}.svg");
+    .no-svg & {
+        background-image: image-url("png/img_#{$i}.png");
+        }
+    }
+}

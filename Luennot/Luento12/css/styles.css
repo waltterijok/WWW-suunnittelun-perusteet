@@ -1,0 +1,184 @@
+@charset "UTF-8";
+* {
+  -ms-box-sizing: content-box;
+  -o-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+.demo {
+  color: #0000FF;
+}
+
+/* Tämä esimerkki määrittelee linkin (a) värin €color2, hover ja focus värin $color4,
+visited ja active väri on $color5 */
+a {
+  color: #FFBF00;
+}
+a:hover, a:focus {
+  color: #7FFF00;
+}
+a:visited, a:active {
+  color: #007FFF;
+}
+
+.main .content {
+  width: 70%; /* tämä määrittelee kohteeksi .content class, joka sijoittuu .main class sisälle */
+}
+.content .main {
+  width: 100%; /* kun & merkki on siselletyn classin perässä, kääntyy ympäri -> .main class joka on .contentin sisällä (WHY THE FUCK????) */
+}
+.level_3 .content .main { /* kun & merkki on viimeisen classin perässä, koko rimpsu kääntyy -> level_3 class, jonka sisällä on .content class, jonka sisällä on .main class (???????) */
+  width: 30%;
+}
+
+.main.content {
+  color: #007FFF; /* kun & merkki on ensimmäisen classin jälkeen toisen classin rivillä, se nitoo ne yhteen -> .main.content */
+}
+
+/* tässä määritellään yleinen muotoilu box classeille (% tarkoittaa placeholderia) jonka kaikki muut boxit käyttävät */
+.div9, .div8, .div7, .div6, .div5, .div4, .div3, .div2, .div1, .info-box, .success-box, .warning-box {
+  padding: 2em;
+  color: #000;
+  background-color: #FFF;
+  height: 100px;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 100px;
+}
+
+.warning-box {
+  /* <-- extend %box hakee määrittelyt placeholderilta ja ottaa ne itselleen */
+  border: 4px dotted #FF0000;
+}
+
+.success-box {
+  /* <-- extend %box hakee määrittelyt placeholderilta ja ottaa ne itselleen */
+  border: 4px dotted #7FFF00;
+}
+
+.info-box {
+  /* <-- extend %box hakee määrittelyt placeholderilta ja ottaa ne itselleen */
+  border: 4px dotted #0000FF;
+}
+
+.container {
+  display: flex;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  margin: 5px;
+}
+
+.div1 {
+  background-color: #7FFF00;
+}
+
+.div2 {
+  background-color: rgb(191, 255, 127.5);
+}
+
+.div3 {
+  background-color: rgb(63.5, 127.5, 0);
+}
+
+.div4 {
+  background-color: #00FFFF;
+}
+
+.div5 {
+  background-color: red;
+}
+
+.div6 {
+  background-color: #FF00FF;
+}
+
+.div7 {
+  background-color: yellow;
+}
+
+.div8 {
+  background-color: aqua;
+}
+
+.div8 {
+  background-color: rgba(127, 0, 255, 0.2);
+}
+
+.div9 {
+  background-color: #7fcc33;
+}
+
+.item_1 {
+  background-image: image-url("svg/img_1.svg");
+}
+.no-svg .item_1 {
+  background-image: image-url("png/img_1.png");
+}
+
+.item_2 {
+  background-image: image-url("svg/img_2.svg");
+}
+.no-svg .item_2 {
+  background-image: image-url("png/img_2.png");
+}
+
+.item_3 {
+  background-image: image-url("svg/img_3.svg");
+}
+.no-svg .item_3 {
+  background-image: image-url("png/img_3.png");
+}
+
+.item_4 {
+  background-image: image-url("svg/img_4.svg");
+}
+.no-svg .item_4 {
+  background-image: image-url("png/img_4.png");
+}
+
+.item_5 {
+  background-image: image-url("svg/img_5.svg");
+}
+.no-svg .item_5 {
+  background-image: image-url("png/img_5.png");
+}
+
+.item_6 {
+  background-image: image-url("svg/img_6.svg");
+}
+.no-svg .item_6 {
+  background-image: image-url("png/img_6.png");
+}
+
+.item_7 {
+  background-image: image-url("svg/img_7.svg");
+}
+.no-svg .item_7 {
+  background-image: image-url("png/img_7.png");
+}
+
+.item_8 {
+  background-image: image-url("svg/img_8.svg");
+}
+.no-svg .item_8 {
+  background-image: image-url("png/img_8.png");
+}
+
+.item_9 {
+  background-image: image-url("svg/img_9.svg");
+}
+.no-svg .item_9 {
+  background-image: image-url("png/img_9.png");
+}
+
+.item_10 {
+  background-image: image-url("svg/img_10.svg");
+}
+.no-svg .item_10 {
+  background-image: image-url("png/img_10.png");
+}
